@@ -4,3 +4,4 @@ discord
 linuxtoys
 lsd
 fd
+sublime-text

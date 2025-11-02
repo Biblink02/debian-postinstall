@@ -10,3 +10,4 @@ pulseaudio-module-bluetooth
 libspa-0.2-bluetooth
 tree
 git-credential-oauth
+wireguard
