@@ -56,7 +56,7 @@ done < "$SECRETS_LIST"
 chmod 600 "$SECRETS_FILE"
 
 echo
-echo "✅ Secrets setup completed."
+echo "Secrets setup completed."
 echo
 echo "Make sure your ~/.profile contains this line:"
 echo '[ -f "$HOME/.secrets" ] && . "$HOME/.secrets"'
