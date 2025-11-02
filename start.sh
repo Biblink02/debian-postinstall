@@ -8,7 +8,7 @@ echo "Cloning repository into $TMP_DIR..."
 git clone --depth=1 "$REPO_URL" "$TMP_DIR" >/dev/null
 
 echo "Running install.sh..."
-bash "$TMP_DIR/scripts/install.sh"
+cd "$TMP_DIR/scripts" && bash install.sh
 
 echo "Cleaning up..."
 rm -rf "$TMP_DIR"
