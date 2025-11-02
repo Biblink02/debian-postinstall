@@ -23,12 +23,22 @@ fi
 if [ -d ./applications ]; then
     echo "Installing custom applications..."
     for script in ./applications/*.sh; do
-        echo "Running $(basename "$script")..."
-        bash "$script"
+        app_name=$(basename "$script" | sed 's/-install\.sh$//')
+        read -rp "Do you want to install ${app_name}? (y/n): " confirm
+        case "$confirm" in
+            [Yy]*)
+                echo "Running ${app_name}-install.sh..."
+                bash "$script"
+                ;;
+            *)
+                echo "Skipping ${app_name}."
+                ;;
+        esac
     done
 else
     echo "./applications directory not found, skipping."
 fi
+
 
 # 3. Apply user configuration files
 if [ -f ./setup-configs.sh ]; then
