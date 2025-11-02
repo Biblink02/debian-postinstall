@@ -7,49 +7,49 @@ echo "Starting Debian post-install setup..."
 sudo apt update && sudo apt upgrade -y
 
 # Load helper functions if present
-if [ -f scripts/utils.sh ]; then
-    source scripts/utils.sh
+if [ -f ./utils.sh ]; then
+    source ./utils.sh
 fi
 
 # 1. Install base APT packages
-if [ -f scripts/setup-packages-apt.sh ]; then
+if [ -f ./setup-packages-apt.sh ]; then
     echo "Installing APT packages..."
-    bash scripts/setup-packages-apt.sh
+    bash ./setup-packages-apt.sh
 else
     echo "setup-packages-apt.sh not found, skipping."
 fi
 
 # 2. Install applications
-if [ -d scripts/applications ]; then
+if [ -d ./applications ]; then
     echo "Installing custom applications..."
-    for script in scripts/applications/*.sh; do
+    for script in ./applications/*.sh; do
         echo "Running $(basename "$script")..."
         bash "$script"
     done
 else
-    echo "scripts/applications directory not found, skipping."
+    echo "./applications directory not found, skipping."
 fi
 
 # 3. Apply user configuration files
-if [ -f scripts/setup-configs.sh ]; then
+if [ -f ./setup-configs.sh ]; then
     echo "Applying user configs..."
-    bash scripts/setup-configs.sh
+    bash ./setup-configs.sh
 else
     echo "setup-configs.sh not found, skipping."
 fi
 
 # 4. Setup secrets (tokens, credentials, etc.)
-if [ -f scripts/setup-secrets.sh ]; then
+if [ -f ./setup-secrets.sh ]; then
     echo "Configuring user secrets..."
-    bash scripts/setup-secrets.sh
+    bash ./setup-secrets.sh
 else
     echo "setup-secrets.sh not found, skipping."
 fi
 
 # 5. Install deb-get and related packages
-if [ -f scripts/setup-packages-deb.sh ]; then
+if [ -f ./setup-packages-deb.sh ]; then
     echo "Installing deb-get packages..."
-    bash scripts/setup-packages-deb.sh
+    bash ./setup-packages-deb.sh
 else
     echo "setup-packages-deb.sh not found, skipping."
 fi
