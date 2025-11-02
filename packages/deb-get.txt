@@ -1,0 +1,6 @@
+localsend
+google-chrome-stable
+discord
+linuxtoys
+lsd
+fd

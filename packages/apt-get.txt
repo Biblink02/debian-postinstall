@@ -1,0 +1,12 @@
+curl
+git
+htop
+build-essential
+nethogs
+deb-get
+bluetooth
+bluez
+pulseaudio-module-bluetooth
+libspa-0.2-bluetooth
+tree
+git-credential-oauth
