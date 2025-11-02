@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/user/repo.git"
+REPO_URL="https://github.com/Biblink02/debian-postinstall.git"
 TMP_DIR="$(mktemp -d -t debian-setup-XXXX)"
 
 echo "Cloning repository into $TMP_DIR..."
