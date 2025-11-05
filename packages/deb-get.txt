@@ -5,3 +5,4 @@ linuxtoys
 lsd
 fd
 sublime-text
+fsearch

@@ -3,5 +3,6 @@ alias rsync='rsync --progress --partial'
 alias aptall='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean'
 alias deb='deb-get'
 alias deball='deb-get update && deb-get upgrade'
+alias upgall='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && deb-get update && deb-get upgrade'
 alias ls='lsd'
 alias hg='history | grep"
