@@ -3,7 +3,6 @@ git
 htop
 build-essential
 nethogs
-deb-get
 bluetooth
 bluez
 pulseaudio-module-bluetooth
