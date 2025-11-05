@@ -4,7 +4,7 @@ set -e
 echo "Starting Debian post-install setup..."
 
 # Update and upgrade system
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 # Load helper functions if present
 if [ -f ./utils.sh ]; then
@@ -66,4 +66,9 @@ fi
 
 echo
 echo "Post-installation completed successfully."
-echo "Don't forget to install single IDE."
+printf "Don't forget to:\n
+Install single IDE from Toolbox.\n
+Run \"git-credential-oauth configure\" to configure the OAuth GitHub helper\n
+Set Sublime-Text as default text editor\n
+"
+
