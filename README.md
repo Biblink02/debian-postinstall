@@ -16,7 +16,11 @@ Automated setup script for configuring a fresh Debian system.
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/Biblink02/debian-postinstall/main/start.sh)
 ```
-
+> Note: the installer runs in non-interactive mode by default where it installs all the packages and applications (AUTO=1).     
+> To enable prompts use:
+```bash
+AUTO=0 bash <(curl -fsSL https://raw.githubusercontent.com/Biblink02/debian-postinstall/main/start.sh)
+```
 ## What the script does
 1. Runs system update and upgrade
 2. Installs APT packages interactively
