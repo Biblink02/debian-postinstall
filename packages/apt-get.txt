@@ -12,3 +12,5 @@ git-credential-oauth
 wireguard
 syncthing
 sshpilot
+fsearch
+lsd
