@@ -6,3 +6,5 @@ lsd
 fd
 sublime-text
 fsearch
+sshpilot
+syncthing
